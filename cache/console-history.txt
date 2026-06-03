@@ -1,0 +1,18 @@
+})  params: [{ chainId: '0x7a69' }], // 31337 的 hex  method: 'wallet_switchEthereumChain',await window.ethereum.request({
+await token.transfer(await treasury.getAddress(), ethers.parseUnits("40000", 18))
+await treasury.owner();
+await token.transfer(await treasury.getAddress(), ethers.parseUnits("40000", 18))
+await token.transfer(await treasury.getAddress(), ethers.parseUnits("50000", 18))
+// 转 50000 代币到资金库
+const treasury = await ethers.getContractAt("Treasury", "0x4654891e6325B15343c8cc638b7071c1D8A9B3c6")
+const token = await ethers.getContractAt("LaunchToken", "0x77c8A2D4ea5F446D9412BE87670616f6f1C72B8E")
+await ethers.provider.send("evm_mine", [])
+await ethers.provider.send("evm_increaseTime", [3 * 86400])
+await ethers.provider.send("evm_mine", [])
+await ethers.provider.send("evm_increaseTime", [2 * 86400])
+await ethers.provider.send("evm_mine", [])
+await ethers.provider.send("evm_increaseTime", [2 * 86400])
+await token.approve("0x0b1A02fD931Aae70B76f7c3b58e8604E550F7cB2", ethers.parseUnits("100000", 18))
+const token = await ethers.getContractAt("LaunchToken", "0x023De1252f9272848ef364bbDfb708A01ba2f5B9")
+await vesting.revoke("0x0C6f68B9851d29BdcCEEf767F40D13D5BC002325")
+const vesting = await ethers.getContractAt("TokenVesting", "0x69BcEFE5f0b4E88e49d54386f429aEba8c8095D2")
